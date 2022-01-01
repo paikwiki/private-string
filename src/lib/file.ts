@@ -1,6 +1,6 @@
 import fs from "fs-extra";
 
-interface WriteToFileParams {
+interface Params {
   filePath: string;
   data: string;
 }
@@ -10,6 +10,6 @@ export const readFromFile = (filePath: string) => {
   return bytes.toString();
 };
 
-export const writeToFile = ({ filePath, data }: WriteToFileParams) => {
+export const writeToFile = ({ filePath, data }: Params) => {
   fs.writeFileSync(filePath, data);
 };
